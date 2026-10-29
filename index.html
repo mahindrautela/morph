@@ -33,6 +33,7 @@
         <a href="#architecture">Architecture</a>
         <a href="#tasks">Capabilities &amp; tasks</a>
         <a href="#datasets">Data universe</a>
+        <a href="#rollouts">Rollouts</a>
         <a href="#citation">Citation</a>
       </div>
     </nav>
@@ -75,6 +76,65 @@
           <div><h3>Pretraining · 6 datasets</h3><ul><li>MHD-3D</li><li>DR-2D</li><li>CFD-1D</li><li>CFD2D-IC</li><li>CFD-3D</li><li>SW-2D</li></ul></div>
           <div><h3>Fine-tuning · 7 datasets</h3><ul><li>DR-1D</li><li>CFD-2D</li><li>CFD3D-TURB</li><li>BE-1D</li><li>GSDR-2D</li><li>TGC-3D</li><li>FNS-KF-2D</li></ul></div>
         </div>
+      </div>
+    </section>
+
+    <section class="section muted-section" id="rollouts">
+      <div class="container">
+        <h2>Autoregressive rollouts</h2>
+        <p class="rollout-intro">Ground-truth dynamics and MORPH-FM-S* predictions across a 20-step autoregressive rollout.</p>
+        <dl class="rollout-details" aria-label="Fine-tuning setup">
+          <div>
+            <dt>Fine-tuning trajectories</dt>
+            <dd>128 <span>(&lt;1% of data)</span></dd>
+          </div>
+          <div>
+            <dt>Epochs</dt>
+            <dd>100</dd>
+          </div>
+        </dl>
+
+        <article class="rollout-group">
+          <h3>NS-SL</h3>
+          <div class="rollout-grid">
+            <figure class="rollout-card">
+              <img src="static/media/fig09_NS-SL_vx.gif" alt="NS-SL horizontal velocity autoregressive rollout comparing ground truth with the MORPH prediction over 20 time steps." loading="lazy">
+              <figcaption>Horizontal velocity <i>v</i><sub>x</sub></figcaption>
+            </figure>
+            <figure class="rollout-card">
+              <img src="static/media/fig09_NS-SL_vy.gif" alt="NS-SL vertical velocity autoregressive rollout comparing ground truth with the MORPH prediction over 20 time steps." loading="lazy">
+              <figcaption>Vertical velocity <i>v</i><sub>y</sub></figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="rollout-group">
+          <h3>PwC</h3>
+          <div class="rollout-grid">
+            <figure class="rollout-card">
+              <img src="static/media/fig10_NS-PwC_vx.gif" alt="PwC horizontal velocity autoregressive rollout comparing ground truth with the MORPH prediction over 20 time steps." loading="lazy">
+              <figcaption>Horizontal velocity <i>v</i><sub>x</sub></figcaption>
+            </figure>
+            <figure class="rollout-card">
+              <img src="static/media/fig10_NS-PwC_vy.gif" alt="PwC vertical velocity autoregressive rollout comparing ground truth with the MORPH prediction over 20 time steps." loading="lazy">
+              <figcaption>Vertical velocity <i>v</i><sub>y</sub></figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article class="rollout-group">
+          <h3>CE-RM</h3>
+          <div class="rollout-grid">
+            <figure class="rollout-card">
+              <img src="static/media/fig11_CE-RM_P.gif" alt="CE-RM pressure autoregressive rollout comparing ground truth with the MORPH prediction over 20 time steps." loading="lazy">
+              <figcaption>Pressure <i>P</i></figcaption>
+            </figure>
+            <figure class="rollout-card">
+              <img src="static/media/fig11_CE-RM_vx.gif" alt="CE-RM horizontal velocity autoregressive rollout comparing ground truth with the MORPH prediction over 20 time steps." loading="lazy">
+              <figcaption>Horizontal velocity <i>v</i><sub>x</sub></figcaption>
+            </figure>
+          </div>
+        </article>
       </div>
     </section>
 
